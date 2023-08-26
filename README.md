@@ -230,13 +230,10 @@ Date:   Tue Mar 28 00:26:53 2023 +0300
 ```mermaid
 graph LR;
   untracked -- "git add" --> staged;
-  staged    -- "git commit" --> tracked/comitted;
-  tracked   -- "modifications" --> modified;
+  staged    -- "git commit" --> tracked/commited;
+  tracked/commited   -- "modifications" --> modified;
   modified  -- "git add" --> staged;
   staged    -- "modifications" --> modified;
-
-%% стрелка без текста для примера: 
-  A --> B;
 ``` 
 
 1. Файл только что создали. Git про него ещё ничего не знает. Состояние: untracked.
